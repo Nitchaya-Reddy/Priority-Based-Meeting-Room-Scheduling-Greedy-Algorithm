@@ -1,0 +1,56 @@
+{
+  "description": "Test cases for meeting room scheduling algorithm",
+  "test_cases": [
+    {
+      "name": "Classic Example",
+      "meetings": [
+        {"id": "M1", "start": 1, "finish": 4},
+        {"id": "M2", "start": 3, "finish": 5},
+        {"id": "M3", "start": 0, "finish": 6},
+        {"id": "M4", "start": 5, "finish": 7},
+        {"id": "M5", "start": 3, "finish": 9},
+        {"id": "M6", "start": 5, "finish": 9},
+        {"id": "M7", "start": 6, "finish": 10},
+        {"id": "M8", "start": 8, "finish": 11},
+        {"id": "M9", "start": 8, "finish": 12},
+        {"id": "M10", "start": 2, "finish": 14},
+        {"id": "M11", "start": 12, "finish": 16}
+      ],
+      "expected_count": 4,
+      "expected_selection": ["M1", "M4", "M8", "M11"]
+    },
+    {
+      "name": "Business Day Scenario",
+      "meetings": [
+        {"id": "Team Standup", "start": 9.0, "finish": 9.5},
+        {"id": "Client Call", "start": 9.5, "finish": 11.0},
+        {"id": "Code Review", "start": 10.0, "finish": 11.5},
+        {"id": "Lunch Meeting", "start": 12.0, "finish": 13.0},
+        {"id": "Design Discussion", "start": 11.5, "finish": 13.0},
+        {"id": "Sprint Planning", "start": 13.0, "finish": 15.0},
+        {"id": "1-on-1", "start": 14.0, "finish": 15.0},
+        {"id": "Project Demo", "start": 15.0, "finish": 16.0},
+        {"id": "Team Sync", "start": 15.5, "finish": 17.0}
+      ],
+      "expected_count": 5
+    },
+    {
+      "name": "No Overlaps",
+      "meetings": [
+        {"id": "A", "start": 1, "finish": 2},
+        {"id": "B", "start": 3, "finish": 4},
+        {"id": "C", "start": 5, "finish": 6}
+      ],
+      "expected_count": 3
+    },
+    {
+      "name": "All Overlap",
+      "meetings": [
+        {"id": "X", "start": 1, "finish": 5},
+        {"id": "Y", "start": 2, "finish": 4},
+        {"id": "Z", "start": 1.5, "finish": 4.5}
+      ],
+      "expected_count": 1
+    }
+  ]
+}
