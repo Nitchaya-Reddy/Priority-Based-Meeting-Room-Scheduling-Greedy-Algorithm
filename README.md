@@ -1,9 +1,8 @@
 # Priority-Based Meeting Room Scheduling - Greedy Algorithm
 
-## Project Members
+## Project Member
 
 - Venkata Nitchaya Reddy Konkala (UFID: 34102083)
-- Keerthi Reddy Gudibandi (UFID: 13652831)
 
 ## Problem: Type-Based Priority Meeting Scheduling
 
